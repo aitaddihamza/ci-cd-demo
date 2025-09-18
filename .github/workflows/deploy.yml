@@ -21,7 +21,7 @@ jobs:
       - name: 🚀 Déployer sur le serveur
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
-            cd /home/${{ secrets.SSH_USER }}/demo-laravel &&
+            cd /home/${{ secrets.SSH_USER }}/ci-cd-demo &&
             git pull origin main &&
             echo '✅ Déploiement terminé !'
           "
