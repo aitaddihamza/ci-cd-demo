@@ -1,0 +1,1 @@
+it's working but it's not really a ci cd what actually hapennign is just i push the code directory to this repo on the server not github.
