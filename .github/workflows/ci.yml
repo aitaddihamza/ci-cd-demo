@@ -1,0 +1,21 @@
+name: CI Demo
+
+on:
+  push:
+    branches: ["main"] # déclenche le pipeline sur push dans main
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: ⚡ Exécuter un script
+        run: echo "Hello depuis GitHub Actions !"
+
+      - name: ✅ Vérifier un fichier
+        run: ls -la
